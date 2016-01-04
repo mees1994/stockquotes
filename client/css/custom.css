@@ -1,0 +1,12 @@
+
+.winner {
+    color: green;
+}
+
+.loser {
+    color: #ff0000;
+}
+
+.normal {
+	color: white;
+}

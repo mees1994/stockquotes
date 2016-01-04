@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+    <title>Real time stock quotes</title>
+</head>
+<body>
+<div id="stockquotes">Waiting for data...</div>
+<!--<script src="https://cdn.socket.io/socket.io-1.3.7.js"></script>-->
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    var socket = io.connect();
+
+    socket.on('stockquotes', function (data) {
+        document.getElementById("stockquotes").innerHTML = JSON.stringify(data);
+    });
+</script>
+</body>
+</html>
+
